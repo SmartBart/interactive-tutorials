@@ -74,8 +74,8 @@ class Pojazd:
 # Ponizej umiesc swoj kod
 
 # sprawdzenie kodu
-print Auto1.opis()
-print Auto2.opis()
+print(Auto1.opis())
+print(Auto2.opis())
 
 Expected Output
 ---------------
@@ -85,3 +85,32 @@ Expected Output
 
 Solution
 --------
+
+#gotowa klasa Pojazd
+
+class Pojazd:
+    nazwa = ""
+    rodzaj = "auto"
+    kolor = ""
+    wartosc = 100.00
+    def opis(self):
+        napis_opisu = "%s to %s %s warty %.2f zl." % (self.nazwa, self.kolor, self.rodzaj, self.wartosc)
+        return napis_opisu
+
+# Ponizej umiesc swoj kod
+Auto1 = Pojazd()
+Auto2 = Pojazd()
+
+Auto1.nazwa = "Ferrari"
+Auto1.rodzaj = "kabriolet"
+Auto1.kolor = "czerwony"
+Auto1.wartosc = 60000.00
+
+Auto2.nazwa = "Ikarus"
+Auto2.rodzaj = "autobus"
+Auto2.kolor = "niebieski"
+Auto2.wartosc = 10000.00
+
+# sprawdzenie kodu
+print(Auto1.opis())
+print(Auto2.opis())
